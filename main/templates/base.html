@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adamawa State Post Primary Schools Management Board, Yola</title>
+	<link rel="stylesheet" type="text/css" href="{% static "styles/main.css" %}">
+</head>
+<body>
+
+	{% if form %}
+		<div class="error-div">
+			<span class="error-message">{{ form.errors }}</span>
+		</div>
+	{% endif %}
+
+	<nav class="nav">
+		<div></div>
+		<div class="header">
+			<img src="{% static "images/logo.png" %}" class="logo">
+			<h2 class="site-title">Adamawa State Post Primary Schools Management Board, Yola</h2>
+			<h4>Application for appointment</h4>
+			<h5>Senior Staff</h5>
+		</div>
+		<div></div>
+	</nav>
+
+	<main class="main">
+		{% block main %} {% endblock %}
+	</main>
+	<script src="{% static "js/script.js" %}"></script>
+</body>
+</html>

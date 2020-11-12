@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main h3 {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.button {
+	padding: 10px;
+	margin: 10px 0px;
+	background-color: #11cf47;
+	color: #fff;
+	border-width: 0;
+	border-radius: 8px
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 50;
+  text-align: center;
+}
+
+.logo {
+	width: 100px;
+	margin-top: 20px
+}
+
+.site-title {
+  text-align: center;
+}
+
+/* Style the form */
+#regForm {
+  background-color: #fff;
+  padding: 0px 40px;
+  width: 70%;
+  margin-top: 50px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50;
+}
+
+.next {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.submit {
+	width: 500px;
+	align-self: center;
+}
+
+.error-message { 
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px
+}
+
+.error-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success {
+  background-color: #ced9d7;
+  padding: 50px;
+  text-align: center;
+  width: 70%;
+}
+
+.success div {
+  margin: 15px;
+}
+
+.download {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.applicant_data { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 50px
+}

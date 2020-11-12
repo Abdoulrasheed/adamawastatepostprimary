@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+		<div>
+			<h3>Note: This form is to be completed and submitted !</h3>
+		</div>
+	
+		<form id="regForm" method="post" enctype="multipart/form-data">{% csrf_token %}
+	
+		<!-- One "tab" for each step in the form: -->
+		<div id="prev">
+			<h1>Part A:</h1>
+			<p><input required placeholder="Post of which you are applying" name="post" oninput="this.className = ''"></p>
+			<p><input required placeholder="Department" name="dept" oninput="this.className = ''"></p>
+			<p><input required placeholder="Name in full" name="name" oninput="this.className = ''"></p>
+			<p><input required placeholder="Date and Place of birth" name="dob" oninput="this.className = ''"></p>
+			<p><input required placeholder="Local Govt. Area / Ward" name="lga" oninput="this.className = ''"></p>
+			<p><input required placeholder="Phone number" name="phone" oninput="this.className = ''"></p>
+			<p><input required placeholder="Email" name="email" oninput="this.className = ''"></p>
+			<p><input required placeholder="Nationality" name="nationality" oninput="this.className = ''"></p>
+			<p><input required placeholder="Language you understand well" name="lang" oninput="this.className = ''"></p>
+			<p><input required placeholder="Next of kin / Address" name="nok_address" oninput="this.className = ''"></p>
+			<p><input required placeholder="Next of kin / Phone  number" name="nok_phone" oninput="this.className = ''"></p>
+			<p><input required placeholder="Marital Status" name="mstatus" oninput="this.className = ''"></p>
+		</div>
+		<div id="next" hidden>
+			<div>
+				<p>Passport</p>
+				<input type="file" required name="passport">
+			</div>
+
+			<div>
+				<p>Signature</p>
+				<input type="file" required name="sig">
+			</div>
+		</div>
+	
+		<div style="overflow:auto;">
+			<div style="float:right;">
+				<button class="button" type="button" id="btnPrev" onclick="prev()">Previous</button>
+				<button class="button" type="button" id="btnNext" onclick="next()">Next</button>
+			</div>
+		</div>
+
+		<input id="submit" type="submit" name="submit" hidden value="Submit" class="submit" />
+	</form>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'styles/printout.css' %}" media="all" />
+  </head>
+  <body>
+    <header class="clearfix">
+      <div id="logo">
+        <img src="{% static 'images/logo.png' %}" width="100">
+        <h3>Adamawa State Post Primary Schools Management Board, Yola</h3>
+        <h5>Application for appointment <br> Senior Staff</h5>
+      </div>
+
+      <h1>APPLICANT PRINT OUT</h1>
+      <center style="margin-bottom: 10px">
+        <img src="{{ applicant.passport.url }}" width="120" height="120" style="border-radius: 60px">      
+      </center>
+
+      <h4 id="legend">APPLICANT INFORMATION</h4>
+      <div id="project">
+        <div><span>FULLNAME</span> {{ applicant.name }}</div>
+        <div><span>POST</span> {{ applicant.post }}</div>
+        <div><span>DEPARTMENT</span> {{ applicant.dept }}</div>
+        <div><span>LGA</span> <a href="#">{{ applicant.lga }}</a></div>
+        <div><span>PHONE NUMBER</span> <a href="#">{{ applicant.phone }}</a></div>
+        <div><span>EMAIL</span> {{ applicant.email }}</div>
+        <div><span>NATIONALITY</span> {{ applicant.nationality }}</div>
+        <div><span>LANGUAGE</span> {{ applicant.lang }}</div>
+        <div><span>MARITAL STATUS</span> {{ applicant.mstatus }}</div>
+        <div style="margin:5px">
+          <p>SIGNATURE</p>
+          <img src="{{ applicant.sig.url }}" width="60" height="60">
+        </div>
+      </div>
+    </header>
+    <hr>
+     <main>
+      <h4 id="legend">NEXT OF KIN INFORMATION</h4>
+       <div id="project">
+        <div><span>ADDRESS</span> {{ applicant.nok_address }}</div>
+        <div><span>PHONE NUMBER</span> {{ applicant.nok_phone }}</div>
+      </div>
+    </main>
+    <footer>Keep Safe</footer>
+    <p style="page-break-after: always"/>
+  </body>
+</html>

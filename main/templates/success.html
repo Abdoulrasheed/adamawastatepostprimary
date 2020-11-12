@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+<div class="success">
+	<h2>Successfully registered !!</h2>
+	<div>Your registration have been received!</div>
+	<a class="download" href="{% url 'pdf_printout' applicant_id=applicant.id %}">Click here to download your printout </a>
+</div>
+
+{% endblock %}
